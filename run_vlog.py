@@ -161,6 +161,7 @@ def run_vlog_single_trial(seed):
     # ----------------------- Hyperparameter and configurations -------------------------
 
     type_list = ["vlog", "baseline", "oracle", "vlog-self", "suphx", "opd"]
+    assert 1 <= args.type_id <= 6
     type = type_list[int(args.type_id) - 1]
 
     print("******************  Current Model Type is ", type)

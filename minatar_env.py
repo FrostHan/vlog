@@ -1,6 +1,7 @@
 import numpy as np
 
-from minatar import Environment, GUI
+from minatar import Environment
+from minatar.gui import GUI
 import gym
 from gym.spaces import Discrete, Box
 
