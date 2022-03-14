@@ -96,7 +96,7 @@ CQL will be used if the argument "cql" is 1, and BC will be used if "cql" is 0.
 
 
 ### Evaluation
-To train the model, one should first train the models using run_vlog_mahjong.py (We provide an example of trained model of VLOG using CQL (mahjong_VLOG_CQL_0.model))  
+To train the model, one should first train the models using run_vlog_mahjong.py (We provide an example of trained model of VLOG using CQL in the supplementary material of https://openreview.net/forum?id=pjqqxepwoMy)  
 To evaluate the agents, one may do
 ```
 python eval_vlog_mahjong.py --times 8 --model_dir_0 [model_dir_0] --model_dir_1 [model_dir_1] --model_dir_2 [model_dir_2] --model_dir_3 [model_dir_3]
