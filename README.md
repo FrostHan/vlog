@@ -1,6 +1,6 @@
 # Variational Latent Oracle Guiding (VLOG)
 
-This repository includes the source code for the paper "Variational oracle guiding for reinforcement learning" (https://openreview.net/forum?id=pjqqxepwoMy) by Dongqi Han, Tadashi Kozuno, Xufang Luo, Zhao-Yun Chen, Kenji Doya, Yuqing Yang and Dongsheng Li.
+This repository includes the source code for the ICLR 2022 paper "Variational oracle guiding for reinforcement learning" (https://openreview.net/forum?id=pjqqxepwoMy) by Dongqi Han, Tadashi Kozuno, Xufang Luo, Zhao-Yun Chen, Kenji Doya, Yuqing Yang and Dongsheng Li.
 
 ```
 @inproceedings{han2022variational,
@@ -21,7 +21,7 @@ This repository includes the source code for the paper "Variational oracle guidi
 - gym-maze (https://github.com/MattChanTK/gym-maze)
 - minatar (https://github.com/kenjyoung/MinAtar)
 
-For the experiments on Mahjong, you will need https://github.com/Agony5757/mahjong/ (newer version, recommended) or https://github.com/pymahjong/pymahjong (older version which we used in the paper, deprecated).
+For the experiments on Mahjong, see below.
 
 # How to use
 
@@ -66,7 +66,26 @@ data = scipy.io.loadmat("./data/xxx.mat")
 ```
 to get a python dictionary data.
 
+Then one can plot the performance curve, e.g.,
+```
+import matplotlib.pyplot as plt
+plt.plot(data["global_steps"], data["performance_greedy_action_wrt_step"])
+plt.xlabel("global steps")
+plt.ylabel("return")
+plt.show()
+```
+
+
 ## Mahjong
+
+
+To used the code for traning Mahjong agent, you will need https://github.com/pymahjong/pymahjong.
+
+
+### However, we highly recommend to use the newer version of our Mahjong environment (https://github.com/Agony5757/mahjong). The newer version is much faster, and it provides more convienient APIs to the decision AI, including playing with pre-trained VLOG agents. The newer version is different from the older version in terms of some rules and fixing of some bugs.
+
+
+The follows explain how to use the code for the older version (https://github.com/pymahjong/pymahjong).
 
 ### Training
 To train the model, one may do
