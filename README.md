@@ -66,6 +66,16 @@ data = scipy.io.loadmat("./data/xxx.mat")
 ```
 to get a python dictionary data.
 
+Then one can plot the performance curve, e.g.,
+```
+import matplotlib.pyplot as plt
+plt.plot(data["global_steps"], data["performance_greedy_action_wrt_step"])
+plt.xlabel("global steps")
+plt.ylabel("return")
+plt.show()
+```
+
+
 ## Mahjong
 
 
